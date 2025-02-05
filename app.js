@@ -11,7 +11,7 @@ class Mosquito {
         contenedor.appendChild(this.div);
 
         this.clicks = 0;
-        this.velocidad = 5;
+        this.velocidad = 2;
 
         this.div.addEventListener("click", () => {
             this.clicks++;
@@ -46,7 +46,7 @@ class Mosquito {
 
         setTimeout(() => {
             contenedor.removeChild(mensaje);
-        }, 2000);
+        }, 500);
     }
 
     aumentarVelocidad() {
@@ -69,7 +69,7 @@ class Mosquito {
             this.div.style.left = `${currentLeft + this.direccionX * 5}px`;
             this.div.style.top = `${currentTop + this.direccionY * 5}px`;
             console.log("moviendo");
-        }, 140);
+        }, 70);
     }
 
     direccionAleatoria() {
