@@ -3,7 +3,7 @@ body {
     overflow: hidden;
     width: 100%;
     height: 100%;
-    background-image: url('C:/Users/nayel/Desktop/DAW EL CASAR 2º CURSO/DWEC/hormiga/cielo.jpg');
+    background-image: url('https://quiet-custard-1d1408.netlify.app/cielo.jpg');
 }
 
 #contenedor {
