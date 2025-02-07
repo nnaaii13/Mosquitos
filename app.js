@@ -1,6 +1,8 @@
 const contenedor = document.getElementById("contenedor");
 let contador = 0;
 const maximoMosquitos = 5;
+let tiempo = 60;
+let intervalo;
 
 class Mosquito {
     constructor() {
@@ -92,8 +94,45 @@ class Mosquito {
     }
 }
 
+//implementación del cronómetro cuenta atrás
+function iniciar(){
+  if (!intervalo) {
+    intervalo = setInterval(() => {
+        tiempo--;
+        mostrarTiempo();
+        if (tiempo <= 0) {
+            clearInterval(intervalo);
+            intervalo = null;
+            tiempo = 0;
+            mostrarTiempo();
+        }
+    }, 1000);
+  }
+}
+
+function mostrarTiempo(){
+  let minutos = Math.floor((tiempo % 3600) / 60);
+  let segundos = tiempo % 60;
+
+  minutos = minutos % 60;
+  segundos = segundos % 60;
+
+  if (minutos < 10){
+    minutos = '0' + minutos;
+  }
+
+  if (segundos < 10){
+    segundos = '0' + segundos;
+  }
+
+  document.getElementById('tiempo').innerHTML = minutos + ':' + segundos;
+}
+
+//iniciar el cronómetro automáticamente
+iniciar();
+
 setInterval(() => {
-    if (contador < maximoMosquitos) {
+    if (contador < maximoMosquitos && tiempo > 0) {
         new Mosquito();
         contador++;
     }

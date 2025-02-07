@@ -42,4 +42,15 @@ body {
     z-index: 10;
 }
 
+#tiempo {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    padding: 10px;
+    border: 3px solid rgb(236, 59, 174);
+    border-radius: 10px;
+    text-align: center;
+}
   
