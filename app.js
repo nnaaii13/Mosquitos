@@ -71,7 +71,7 @@ class Mosquito {
             this.div.style.left = `${currentLeft + this.direccionX * 5}px`;
             this.div.style.top = `${currentTop + this.direccionY * 5}px`;
             console.log("moviendo");
-        }, 110);
+        }, 140);
     }
 
     direccionAleatoria() {
