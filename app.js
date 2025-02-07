@@ -98,13 +98,6 @@ function eliminarMosquitos() {
     contenedor.innerHTML = ""; //deja vacío el contenedor
 }
 
-function perder() {
-    const perder = document.createElement("div");
-    perder.className = "perder";
-    perder.innerHTML = "Ohh...Has perdido";
-    contenedor.appendChild(perder);
-}
-
 //implementación del cronómetro cuenta atrás
 function cronometro(){
   if (!intervalo) {
@@ -117,7 +110,6 @@ function cronometro(){
             tiempo = 0;
             mostrarTiempo();
             eliminarMosquitos();
-            perder();
         }
     }, 1000);
   }
