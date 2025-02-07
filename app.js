@@ -94,8 +94,19 @@ class Mosquito {
     }
 }
 
+function eliminarMosquitos() {
+    contenedor.innerHTML = ""; //deja vacío el contenedor
+}
+
+function perder() {
+    const perder = document.createElement("div");
+    perder.className = "perder";
+    perder.innerHTML = "Ohh...Has perdido";
+    contenedor.appendChild(perder);
+}
+
 //implementación del cronómetro cuenta atrás
-function iniciar(){
+function cronometro(){
   if (!intervalo) {
     intervalo = setInterval(() => {
         tiempo--;
@@ -105,6 +116,8 @@ function iniciar(){
             intervalo = null;
             tiempo = 0;
             mostrarTiempo();
+            eliminarMosquitos();
+            perder();
         }
     }, 1000);
   }
@@ -129,7 +142,7 @@ function mostrarTiempo(){
 }
 
 //iniciar el cronómetro automáticamente
-iniciar();
+cronometro();
 
 setInterval(() => {
     if (contador < maximoMosquitos && tiempo > 0) {

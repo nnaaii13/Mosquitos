@@ -53,4 +53,18 @@ body {
     border-radius: 10px;
     text-align: center;
 }
+
+.perder{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    border: 3px solid rgb(236, 59, 174);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
   
